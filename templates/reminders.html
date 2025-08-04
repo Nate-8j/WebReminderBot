@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h3>Мои напоминания</h3>
+    {% for reminder in reminders %}
+      <div>
+        <h4>{{reminder["txt"]}}</h4>
+        <p>Дата: {{reminder["time_next_reminder"]}}</p>
+        <p>{{reminder["type_"]}}</p>
+        <hr>
+      </div>
+    {% endfor %}
+{% endblock %}
